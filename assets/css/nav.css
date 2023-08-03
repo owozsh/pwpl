@@ -1,3 +1,7 @@
+.nav-bg {
+  @apply flex items-center justify-between bg-gradient-to-b from-blue-500 to-blue-600 py-2 px-8 text-white;
+}
+
 .nav-item {
   @apply hover:underline;
 }

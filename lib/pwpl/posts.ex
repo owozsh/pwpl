@@ -5,7 +5,11 @@ defmodule Pwpl.Posts do
   alias Pwpl.Repo
   alias Pwpl.Posts.Post
 
-  def get!(id), do: Repo.get!(Post, id)
+  def list(), do: Repo.all(Post)
 
-  def list!(), do: Repo.all(Post)
+  def create_post(attrs) do
+    %Post{}
+    |> Post.changeset(attrs)
+    |> Repo.insert()
+  end
 end
